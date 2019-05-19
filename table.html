@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table tag表格</title>
+	<style>
+		tr{text-align: center}
+	</style>
+</head>
+<body>
+	<!--
+		表格 一对table标签
+		一对tr标签就表示一行
+		一对td标签就表示一列中的一个单元格
+		注意所有内容只可以写在td标签内
+		属性
+		boder 设置单元格的边框 px
+		cellspaing 设置单元格之间的间隙，一般设为0
+		cellpadding 设置单元格内容和边框之间的间隙，一般设为0
+		width 设置表格的宽度
+			(对tr设置没有效果，对td设置那么整个这一列都受影响，不会改变表格的整体，只会让其他td的宽度发生改变)
+		height 设置表格的高度
+			对tr设置有效果，不会改变个表的整体高度，只会让其他tr的高度发生改变，
+			对td设置整个这一行都受影响，同时对td和tr设置谁的值大就用谁的效果）
+		align 设置文字的水平位置 left center right
+			对table设置文字没有效果，会改变表格的位置
+		vlign 设置文字的垂直位置 top middle bottom
+			对table设置没有任何效果	
+		rowspan 合并行  合并同一列的不同行的单元格
+		colspan 合并列	 合并同一行的不同列的单元格
+			注意使用合并单元格以后一定要保证每行的td数量一致
+		bgColor 设置背景颜色 对table,tr,td设置都有效果
+			同时对table,tr,td 设置的话 table<tr<td
+		bordercolor 设置单元格边框的颜色，只可以对table设置
+
+	-->
+	<table border="1px" cellspacing="0" cellpadding="0" width="300px" height="200px" align="center" bordercolor="rgb(100,150,25)">
+		<caption> 
+			表格的标题
+		</caption>
+		<thead><!--表格的头部-->
+			<tr bgcolor="rgb(220,210,210)">
+				<td>序号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td bgcolor="white">性别</td>
+				<td>地址</td>
+			</tr>
+		</thead>
+		<tbody><!--表格的主体-->
+			<tr height="30px">
+			<td>1</td>
+			<td>jason</td>
+			<td>12</td>
+			<td>男</td>
+			<td>a</td>
+		</tr>
+		<tr height="11px">
+			<td width="40px" colspan="2">2</td>
+			
+			<td>14</td>
+			<td>女</td>
+			<td>b</td>
+		</tr>
+		<tr>
+			<td rowspan="2">3</td>
+			<td>eric</td>
+			<td>15</td>
+			<td rowspan="2">男</td>
+			<td>c</td>
+		</tr>
+		
+		<tr>
+			
+			<td>kevin</td>
+			<td>13</td>
+			
+			<td>d</td>
+		</tr>
+		</tbody>
+		<tfoot><!--表格的脚注-->
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+		
+	</table>
+	
+</body>
+</html>

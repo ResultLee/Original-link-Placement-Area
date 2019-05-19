@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新增input类型</title>
+</head>
+<body>
+	<form action="../20190516/form.php">
+		color:<input type="color" name="color"><br>
+		<!--color 类型用在input字段主要用于选取颜色-->
+		date:<input type="date" name="" max="2022-01-01" min="2000-01-01">
+		<br>
+		datetime: <input type="datetime-local" name="datetime"><br>
+		month: <input type="month" name="month"><br>
+		week: <input type="week" name="week"><br>
+		time: <input type="time" name="time"><br>
+
+		<!--
+			date 类型允许你从一个日期选择器选择一个日期。
+			生日: <input type="date" name="bday">
+			相似类型：datetime,datetime-local,month,week,time...
+
+			min/max/step:min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定（约束）。	
+		
+			请使用下面的属性来规定对数字类型的限定：
+			max - 规定允许的最大值
+			min - 规定允许的最小值
+			step - 规定合法的数字间隔
+			value - 规定默认值
+
+		-->
+		E-mail: <input type="email" name="email">
+		number:<input type="number" name="number" max="3000" min="0" step="2"><br>
+		range: <input type="range" name="range"max="10" min="0" step="2"value="5"><br>
+		search:<input type="search" name="search"><br>
+		url:<input type="url" name="url"><br>
+		<input type="submit"><br>
+	<form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>frameset框架集</title>
+</head>
+
+	<!--
+		frameset 划分页面 框架集
+		cols 按列划分页面（竖着分）
+		rows 按行划分页面（横着分）
+		单位 px % *
+		frame 引入页面
+		src 引入网页或者页面
+		注意：使用frameset时需要删除bbody标签
+		noresize 固定页面
+		frameborder 页面边框 默认为1
+		scrolling=“yes/no/auto(自动)” 设置滚动条
+
+		在 frame 标签中设置的name值就是框架名
+	-->
+	<frameset rows="200px,*"frameborder="0">
+
+		<frame src="http://www.baidu.com/" cols="300px,*" noresize  scrolling="no">
+		<frameset cols="30%,*">
+			<frame src="http://www.baidu.com/"  scrolling="auto">
+			<frame src="http://www.baidu.com/" name="right">
+		</frameset>
+	</frameset>
+
+</html>

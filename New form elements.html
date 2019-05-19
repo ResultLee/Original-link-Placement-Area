@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单新增元素</title>
+</head>
+<body>
+  <!--
+  	将文本框和datalist关联起来
+		对input设置list属性,对datalist设置id属性,
+		两者的属性值必须一致
+  -->
+	<input type="text" list="stu">
+	<datalist id="stu">
+		<option value="jason">jason</option>
+		<option value="nancy">nancy</option>
+		<option value="eric">eric</option>
+		<option value="sherman">sherman</option>
+	</datalist>
+	<hr/>
+	<!--
+		将表单和没有写在表单内的表单控件进行关联
+		对表单设置id属性,对控件设置form属性
+		两者的属性值一致时就可以关联
+		(如需引用一个以上的表单，请使用空格分隔的列表 form="form1 form2 form3")
+	-->
+	<form id="username">
+		<input type="text" name="user">
+		<input type="submit">
+	</form>
+	<form id="username1">
+		<input type="text" name="user1">
+		<input type="submit">
+	</form>
+	<input type="password" name="pwd" form="username username1">
+	<!--
+		multiple：规定<input> 元素中可选择多个值。
+		<input type=”file” multiple>
+		multiple 属性是一个 boolean 属性.
+		文件上传按钮添加multiple属性之后允许我们一次性上传多个文件
+		也可用于select标签中
+	-->
+		<input type="file" multiple>
+		<select name="" id="" multiple>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+	<!--
+		required：规定必须在提交之前填写输入域。
+	required 属性是一个 boolean 属性.
+	不能为空的input字段:
+	Username: <input type="text" name="usrname" required>
+	-->
+</body>
+</html>
